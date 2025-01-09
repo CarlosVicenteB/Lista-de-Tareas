@@ -5,5 +5,7 @@ Se desarrollará utilizando **HTML**, **CSS** y **JavaScript**, y los datos se g
 
 ## Créditos
 
-- [Ícono de libro](https://www.flaticon.com/free-icons/book) creados por [Freepik](https://www.flaticon.com/authors/freepik) - Flaticon.
+Las siguientes imágenes utilizadas en este proyecto fueron obtenidas de [Flaticon](https://www.flaticon.com):
+
+- [Ícono de libro](https://www.flaticon.com/free-icons/book) creados por [Freepik](https://www.flaticon.com/authors/freepik).
 - [Ícono de GitHub](https://www.flaticon.com/free-icons/github) creados por [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect).
