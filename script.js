@@ -1,11 +1,14 @@
+// Se obtiene la fecha en un formato DD de MM del AAAA
 const obtenerFecha = () => {
   const fechaActual = new Date()
   const dia = fechaActual.getDate()
   const mes = fechaActual.toLocaleDateString('es-ES', { month: 'long' })
   const anio = fechaActual.getFullYear()
+  // Se extrae del objeto Date la fecha
   return `${dia} de ${mes} del ${anio}`
 }
 
+// Se muestra la fecha actual
 const renderizarFecha = () => {
   const fecha = document.querySelector('.fecha')
   const etiqueta = document.createElement('time')
@@ -13,6 +16,7 @@ const renderizarFecha = () => {
   fecha.appendChild(etiqueta)
 }
 
+// Se renderiza las tareas guardadas
 const renderizarTareas = () => {
   const listaTareas = document.querySelector('.tareas')
   tareas.forEach((tarea) => {
@@ -22,12 +26,26 @@ const renderizarTareas = () => {
   })
 }
 
-const tareas = [
-  { contenido: 'Comer cada dia sano y saludable', fecha: '10-12-2303'},
-  { contenido: 'Comer cada dia sano y saludable', fecha: '10-12-2303'},
-  { contenido: 'Comer cada dia sano y saludable', fecha: '10-12-2303'}
-]
+// Se maneja el input del formulario
+const manejarFormulario = () => {
+  const boton = document.querySelector('.subir')
+  boton.addEventListener('click', (event) => {
+    event.preventDefault()
 
+    const input = document.querySelector('.nueva-tarea')
+    const valor = input.value
+
+    tareas.push({ contenido: valor })
+
+    const listaTareas = document.querySelector('.tareas')
+    listaTareas.innerHTML = ''
+    input.value = ''
+    renderizarTareas()
+  })
+}
+
+const tareas = []
 
 renderizarFecha()
 renderizarTareas()
+manejarFormulario()
