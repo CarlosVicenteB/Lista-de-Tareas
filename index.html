@@ -25,20 +25,22 @@
     </nav>
   </header>
 
-  <main>
-    <section class="contenedor">
+  <main class="contenedor">
+    <section class="lista-de-tareas">
       <time class="fecha"></time>
       <h2>Bienvenido</h2>
 
       <form class="agregar-tarea">
-        <label> Añade una nueva tarea
+        <div class="contenedor-input">
           <input type="text">
-        </label>
-        <button>Subir</button>
+          <span class="placeholder-input">Añadir tarea</span>
+        </div>
       </form>
       
-      <p>Estas son tus tareas pendientes</p>
-      <div class="lista"></div>
+      <div class="lista">
+        <p>Estas son tus tareas pendientes</p>
+        <ul class="tareas"></ul>
+      </div>
     </section>
   </main>
   <script src="./script.js"></script>
