@@ -19,6 +19,9 @@ const renderizarFecha = () => {
 // Se renderiza las tareas guardadas
 const renderizarTareas = () => {
   const listaTareas = document.querySelector('.tareas')
+  listaTareas.innerHTML = ''
+
+  // Mostramos todas las tareas
   tareas.forEach((tarea) => {
     const elemento = document.createElement('li')
     elemento.textContent = tarea.contenido
@@ -28,23 +31,28 @@ const renderizarTareas = () => {
 
 // Se maneja el input del formulario
 const manejarFormulario = () => {
+  // Escuchamos cuando se envia una nueva tarea
   const boton = document.querySelector('.subir')
   boton.addEventListener('click', (event) => {
     event.preventDefault()
 
+    // Extraemos el valor del input y guardamos
     const input = document.querySelector('.nueva-tarea')
-    const valor = input.value
+    const valor = input.value.trim()
 
-    tareas.push({ contenido: valor })
-
-    const listaTareas = document.querySelector('.tareas')
-    listaTareas.innerHTML = ''
-    input.value = ''
-    renderizarTareas()
+    if (valor) {
+      // Guardamos la tarea
+      tareas.push({ contenido: valor })
+  
+      // Almacenamos en el localStorage y renderizamos la lista
+      localStorage.setItem('listaTareas', JSON.stringify(tareas))
+      renderizarTareas()
+      input.value = ''
+    }
   })
 }
 
-const tareas = []
+const tareas = JSON.parse(localStorage.getItem('listaTareas')) ?? []
 
 renderizarFecha()
 renderizarTareas()
