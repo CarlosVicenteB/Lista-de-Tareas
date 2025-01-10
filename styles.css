@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+body {
+  background-color: #234352;
+}
+
 .cabecera {
   display: flex;
   justify-content: space-between;
@@ -38,42 +42,42 @@
   width: 3rem;
 }
 
-.contenedor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.lista-de-tareas {
-  border: 1px solid black;
-  padding: 1.5rem;
-}
-
-.fecha {
-  display: flex;
-  justify-content: end;
-  font-size: 0.8rem;
-}
-
-.agregar-tarea {
-  border: 1px solid black;
-}
-
-.contenedor-input {
+.input-contenedor {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: #d2d2d2;
 }
 
-.placeholder-input {
+.input-contenedor input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid #d2d2d2;
+  border-radius: 2rem;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-contenedor label {
   position: absolute;
+  left: 1.4rem;
+  transition: all 0.16s ease;
 }
 
-.lista{
-  border: 1px solid black;
+.input-contenedor button {
+  position: absolute;
+  right: 0.6rem;
+  border-radius: 100%; 
+  font-size: 1.2rem;
+  width: 2rem;
 }
 
-.tareas {
-  list-style: none;
+.input-contenedor input:focus + .placeholder-input,
+.input-contenedor input:valid + .placeholder-input {
+  background-color: #234352;
+  padding: 0 0.6rem;
+  font-size: 0.8rem;
+  transform: translate(0, -1.4rem);
 }
