@@ -8,6 +8,39 @@
   <title>Lista de Tareas</title>
 </head>
 <body>
-  
+  <header class="cabecera">
+    <h1 class="titulo">
+      <span class="title">LISTA DE</span> 
+      <span class="title">TAREAS</span>
+    </h1>
+    <nav>
+      <ul class="lista-enlaces">
+        <li>
+          <a href="https://github.com/CarlosVicenteB/Lista-de-Tareas" class="enlace-proyecto">
+            <img class="logo-github" src="./img/github.png" alt="Logo de github">
+            Proyecto en github
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contenedor">
+      <time class="fecha"></time>
+      <h2>Bienvenido</h2>
+
+      <form class="agregar-tarea">
+        <label> Añade una nueva tarea
+          <input type="text">
+        </label>
+        <button>Subir</button>
+      </form>
+      
+      <p>Estas son tus tareas pendientes</p>
+      <div class="lista"></div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
 </body>
 </html>
