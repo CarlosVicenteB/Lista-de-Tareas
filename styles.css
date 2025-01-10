@@ -37,3 +37,43 @@
   height: 3rem;
   width: 3rem;
 }
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.lista-de-tareas {
+  border: 1px solid black;
+  padding: 1.5rem;
+}
+
+.fecha {
+  display: flex;
+  justify-content: end;
+  font-size: 0.8rem;
+}
+
+.agregar-tarea {
+  border: 1px solid black;
+}
+
+.contenedor-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.placeholder-input {
+  position: absolute;
+}
+
+.lista{
+  border: 1px solid black;
+}
+
+.tareas {
+  list-style: none;
+}
