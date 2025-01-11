@@ -22,11 +22,36 @@ const renderizarTareas = () => {
   listaTareas.innerHTML = ''
 
   // Mostramos todas las tareas
-  tareas.forEach((tarea) => {
+  tareas.forEach((tarea, id) => {
     const elemento = document.createElement('li')
-    elemento.textContent = tarea.contenido
+    elemento.classList.add('tarea')
+
+    const contenedor = document.createElement('div')
+    contenedor.classList.add('contenedor-tarea')
+
+    const texto = document.createElement('p')
+    texto.textContent = tarea.contenido
+    texto.classList.add('texto-tarea')
+
+    const quitar = document.createElement('button')
+    quitar.classList.add('delete-tarea')
+    quitar.textContent = '+'
+    quitar.addEventListener('click', () => {
+      eliminartarea(id)
+    })
+
+    elemento.appendChild(contenedor)
+    contenedor.appendChild(texto)
+    contenedor.appendChild(quitar)
     listaTareas.appendChild(elemento)
   })
+}
+
+// Eliminar una tarea
+const eliminartarea = (id) => {
+  tareas.splice(id-1, 1)
+  localStorage.setItem('listaTareas', JSON.stringify(tareas))
+  renderizarTareas()
 }
 
 // Se maneja el input del formulario
