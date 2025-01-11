@@ -1,7 +1,6 @@
 # Lista de Tareas
 
-Este proyecto es una aplicación sencilla para gestionar una lista de tareas.  
-Se desarrollará utilizando **HTML**, **CSS** y **JavaScript**, y los datos se guardarán de forma persistente en el **Local Storage** del navegador.  
+Este proyecto es una aplicación sencilla para gestionar una lista de tareas. Se utilizo **HTML**, **CSS** y **JavaScript**, y los datos se guardarán de forma persistente en el **Local Storage** del navegador.  
 
 ## Créditos
 
