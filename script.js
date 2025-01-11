@@ -31,7 +31,7 @@ const renderizarTareas = () => {
   // Mostramos todas las tareas
   tareas.forEach((tarea, id) => {
     const elemento = document.createElement('li')
-    elemento.classList.add('tarea')
+    elemento.classList.toggle('tarea')
 
     const contenedor = document.createElement('div')
     contenedor.classList.add('contenedor-tarea')
@@ -56,7 +56,7 @@ const renderizarTareas = () => {
 
 // Eliminar una tarea
 const eliminartarea = (id) => {
-  tareas.splice(id-1, 1)
+  tareas.splice(id, 1)
   localStorage.setItem('listaTareas', JSON.stringify(tareas))
   renderizarTareas()
 }
