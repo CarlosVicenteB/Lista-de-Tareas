@@ -18,6 +18,13 @@ const renderizarFecha = () => {
 
 // Se renderiza las tareas guardadas
 const renderizarTareas = () => {
+  const mensaje = document.querySelector('.mensaje')
+  if ( tareas.length === 0){
+    mensaje.classList.remove('activado')
+    return
+  }
+  mensaje.classList.add('activado')
+
   const listaTareas = document.querySelector('.tareas')
   listaTareas.innerHTML = ''
 
