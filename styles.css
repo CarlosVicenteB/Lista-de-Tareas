@@ -6,8 +6,10 @@
 }
 
 body {
-  background-color: #2d86af;
+  background-image: linear-gradient(to right, #51ce89 20%, #ebe665 80%);
 }
+
+/* Header */
 
 .cabecera {
   display: flex;
@@ -16,7 +18,6 @@ body {
   padding: 1rem 1.8rem;
   font-size: 0.65rem;
   letter-spacing: 0.1rem;
-  height: auto;
 }
 
 .title {
@@ -42,19 +43,22 @@ body {
   width: 3rem;
 }
 
+/* Formulario */
+
 .input-contenedor {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #d2d2d2;
+  color: #e3e3e3;
 }
 
 .input-contenedor input {
   width: 100%;
   padding: 0.8rem 1.2rem;
-  border: 0.1rem solid #d2d2d2;
+  border: 0.1rem solid #e3e3e3;
+  color: #e3e3e3;
   border-radius: 2rem;
   background-color: transparent;
   outline: none;
@@ -69,21 +73,35 @@ body {
 .input-contenedor button {
   position: absolute;
   right: 0.6rem;
-  border-radius: 100%; 
+  border-radius: 100%;
   font-size: 1.2rem;
   width: 2rem;
-  border: 0.1rem solid white;
-  color: white;
+  border: 0.1rem solid #e3e3e3;
+  color: #e3e3e3;
   font-weight: bold;
-  background-color: transparent;
+  background-color: #3CB371;
+}
+
+.input-contenedor button:hover {
+  background-color: #2E8B57;
+  color: #c3c3c3;
+  border: 0.1rem solid #c3c3c3;
 }
 
 .input-contenedor input:focus + .placeholder-input,
 .input-contenedor input:valid + .placeholder-input {
-  background-color: #2d86af;
+  background-color: #233142;
   padding: 0 0.6rem;
   font-size: 0.8rem;
   transform: translate(0.2rem, -1.4rem);
+}
+
+/* Lista de tareas */
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .tareas {
@@ -105,15 +123,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #d2d2d2;
+  color: #e3e3e3;
 }
 
 .texto-tarea {
   width: 100%;
-  padding: 0.8rem 1.2rem;
-  border: 0.1rem solid #d2d2d2;
+  text-align: justify;
+  padding: 0.8rem 3.5rem 0.8rem 1.2rem;
+  border: 0.1rem solid #e3e3e3;
   border-radius: 2rem;
-  background-color: transparent;
+  background-color: #2b3f57;
 }
 
 .delete-tarea {
@@ -123,8 +142,55 @@ body {
   transform: rotate(45deg);
   font-size: 1.2rem;
   width: 2rem;
-  border: 0.1rem solid white;
-  color: white;
+  border: 0.1rem solid #e3e3e3;
+  color: #e3e3e3;
   font-weight: bold;
-  background-color: transparent;
+  background-color: #f95959;
+}
+
+.delete-tarea:hover {
+  border: 0.1rem solid #c3c3c3;
+  color: #c3c3c3;
+  background-color: #c34646;
+}
+
+/* General */
+
+.lista-de-tareas {
+  background-color: #233142;
+  color: #e3e3e3;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin: 1rem;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 0 5px 2px rgb(0, 0, 0);
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fecha {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.mensaje {
+  display: none;
+}
+
+.activado {
+  display: block;
 }
