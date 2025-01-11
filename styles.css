@@ -128,7 +128,6 @@ body {
 
 .texto-tarea {
   width: 100%;
-  text-align: justify;
   padding: 0.8rem 3.5rem 0.8rem 1.2rem;
   border: 0.1rem solid #e3e3e3;
   border-radius: 2rem;
@@ -174,7 +173,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
+  padding: 2vh 1rem;
 }
 
 .fecha {
