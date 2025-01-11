@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #234352;
+  background-color: #2d86af;
 }
 
 .cabecera {
@@ -72,12 +72,59 @@ body {
   border-radius: 100%; 
   font-size: 1.2rem;
   width: 2rem;
+  border: 0.1rem solid white;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
 }
 
 .input-contenedor input:focus + .placeholder-input,
 .input-contenedor input:valid + .placeholder-input {
-  background-color: #234352;
+  background-color: #2d86af;
   padding: 0 0.6rem;
   font-size: 0.8rem;
-  transform: translate(0, -1.4rem);
+  transform: translate(0.2rem, -1.4rem);
+}
+
+.tareas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tarea {
+  list-style: none;
+  width: 100%;
+}
+
+.contenedor-tarea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #d2d2d2;
+}
+
+.texto-tarea {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid #d2d2d2;
+  border-radius: 2rem;
+  background-color: transparent;
+}
+
+.delete-tarea {
+  position: absolute;
+  right: 0.6rem;
+  border-radius: 100%; 
+  transform: rotate(45deg);
+  font-size: 1.2rem;
+  width: 2rem;
+  border: 0.1rem solid white;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
 }
